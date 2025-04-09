@@ -40,6 +40,47 @@ function createSmoothie() {
 
     const milk = document.querySelector(`input[name="milk"]:checked`);
 
-
+    //function to create smoothie object
+    function Smoothie(
+        costumer,
+        email,
+        phone,
+        address,
+        cupSize,
+        fruit,
+        milk,
+        protein,
+        superfood
+      ) {
+        this.costumer = costumer;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.cupSize = cupSize;
+        this.fruit = fruit;
+        this.milk = milk;
+        this.protein = protein;
+        this.superfood = superfood;
+  
+        //function to display in p tag information
+        this.order = function () {
+          display.textContent = `Smoothie for ${this.costumer} with email ${
+            this.email
+          }
+        with phone ${this.phone} with address at ${
+            this.address
+          }. The cup size is ${this.cupSize}
+        The fruits is/are ${this.fruits}. The milk type is ${
+            this.milk
+          }. The protein powder(s) is/are ${
+            this.protein ? this.protein : "Not Selected"
+          }. The super foods is/are ${
+            this.superfood ? this.superfood : "Not Selected"
+          }`;
+        };
+      }
 
 }
+
+//events listener
+pressButton.addEventListener("click", createSmoothie);
