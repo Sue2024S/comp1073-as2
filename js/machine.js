@@ -40,47 +40,95 @@ function createSmoothie() {
 
     const milk = document.querySelector(`input[name="milk"]:checked`);
 
-    //function to create smoothie object
-    function Smoothie(
-        costumer,
-        email,
-        phone,
-        address,
-        cupSize,
-        fruit,
-        milk,
-        protein,
-        superfood
-      ) {
-        this.costumer = costumer;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-        this.cupSize = cupSize;
-        this.fruit = fruit;
-        this.milk = milk;
-        this.protein = protein;
-        this.superfood = superfood;
+    //validations for values in the form with change of color in background and text
+    if (costumer.value == "") {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Enter Customer Name";
+    } else if (email.value == "") {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Enter Email";
+    } else if (phone.value == "") {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Enter Phone Number";
+    } else if (address.value == "") {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Enter Address";
+    } else if (selectedSize == null) {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Select One Cup Size for your Smoothie";
+    } else if (fruit.length === 0) {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Select as Fruits ";
+    } else if (milk == null) {
+        document.body.style.background = "#FFD300";
+        display.style.color = "red";
+        display.textContent = "Error, Select One Milk Type";
+    } else {
+
+        //reset values to normal
+        display.style.color = "black";
+        document.body.style.background = "#b3ddf7";
   
-        //function to display in p tag information
-        this.order = function () {
-          display.textContent = `Smoothie for ${this.costumer} with email ${
-            this.email
-          }
-        with phone ${this.phone} with address at ${
-            this.address
-          }. The cup size is ${this.cupSize}
-        The fruits is/are ${this.fruits}. The milk type is ${
-            this.milk
-          }. The protein powder(s) is/are ${
-            this.protein ? this.protein : "Not Selected"
-          }. The super foods is/are ${
-            this.superfood ? this.superfood : "Not Selected"
-          }`;
-        };
-      }
+        //function to create smoothie object
+        function Smoothie(
+            costumer,
+            email,
+            phone,
+            address,
+            cupSize,
+            fruit,
+            milk,
+            protein,
+            superfood
+        ) {
+            this.costumer = costumer;
+            this.email = email;
+            this.phone = phone;
+            this.address = address;
+            this.cupSize = cupSize;
+            this.fruit = fruit;
+            this.milk = milk;
+            this.protein = protein;
+            this.superfood = superfood;
+    
+            //function to display in p tag information
+            this.order = function () {
+            display.textContent = `Smoothie for ${this.costumer} with email ${
+                this.email
+            }
+            with phone ${this.phone} with address at ${
+                this.address
+            }. The cup size is ${this.cupSize}
+            The fruits is/are ${this.fruits}. The milk type is ${
+                this.milk
+            }. The protein powder(s) is/are ${
+                this.protein ? this.protein : "Not Selected"
+            }. The super foods is/are ${
+                this.superfood ? this.superfood : "Not Selected"
+            }`;
+            };
+        }
+        //create an instance object
+        let orderSmoothie = new Smoothie(
+            costumer.value,
+            email.value,
+            phone.value,
+            address.value,
+            selectedSize.value,
+            fruitString,
+            milk.value,
+            proteinString,
+            superfoodString
+        );
+        orderSmoothie.order();
 
+    }
 }
-
 //events listener
 pressButton.addEventListener("click", createSmoothie);
