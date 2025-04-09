@@ -1,5 +1,55 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Modak&display=swap');
 
 /* || GENERAL STYLES */
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 100;
+    background-color: #e6b23a;
+    color: #000000;
+    margin: 20;
+    padding: 20;
+  }
 
-/* || UTILITIES */
+/* || SPECIFIC */
+h1 {
+    font-family: "Modak", sans-serif;;
+    font-size: 3em;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+div {
+    margin-bottom: 20px;
+  }
+  
+h1 {
+    color: #e44d26;
+  }
+  
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+button.orderNow {
+    background-color: #e44d26;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+button.orderNow:hover {
+    background-color: #e8789d;
+  }
