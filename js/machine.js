@@ -64,11 +64,11 @@ function createSmoothie() {
     } else if (fruit.length === 0) {
         document.body.style.background = "#FFD300";
         display.style.color = "red";
-        display.textContent = "Error, Select as Fruits ";
+        display.textContent = "Error, Select as many Fruits as you want";
     } else if (milk == null) {
         document.body.style.background = "#FFD300";
         display.style.color = "red";
-        display.textContent = "Error, Select One Milk Type";
+        display.textContent = "Error, Select at least one Milk Type";
     } else {
 
         //reset values to normal
@@ -102,16 +102,16 @@ function createSmoothie() {
             display.textContent = `Smoothie for ${this.costumer} with email ${
                 this.email
             }
-            with phone ${this.phone} with address at ${
+            and phone ${this.phone} should be delivered at ${
                 this.address
             }. The cup size is ${this.cupSize}
-            The fruits is/are ${this.fruits}. The milk type is ${
+            The fruits is/are ${this.fruit}. The milk type is ${
                 this.milk
             }. The protein powder(s) is/are ${
                 this.protein ? this.protein : "Not Selected"
             }. The super foods is/are ${
                 this.superfood ? this.superfood : "Not Selected"
-            }`;
+            }.`;
             };
         }
         //create an instance object
