@@ -2,13 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>See and Say Storymaker | COMP1073 Assignment 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Smoothie Machine | COMP1073 Assignment 2</title>
+    <!-- icon obtained from https://www.flaticon.com/free-icons/mango-juice" created by Muhammad Ali - Flaticon -->
+    <link rel="icon" type="png" sizes="16x16" href="img/logo.png" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="js/machine.js" defer></script>
 </head>
 <body>
     <h1>Smoothie Machine</h1>
-    <form></form>
+    <form>
+        <div>
+            <label for="Costumer">Costumer Name:</label><br>
+            <input type="text" id="Costumer" name="Costumer"><br>
+            <label for="Email">Email:</label><br>
+            <input type="text" id="Email" name="Email"><br>
+            <label for="Phone">Phone:</label><br>
+            <input type="text" id="Phone" name="Phone"><br>
+            <label for="Address">Address:</label><br>
+            <input type="text" id="Address" name="Address"><br>
+          </div>
+          <div>
+            <p>Smoothie Size (Select One):</p>
+            <input type="radio" name="cupsize" value="Small" />Small
+            <input type="radio" name="cupsize" value="Medium" />Medium
+            <input type="radio" name="cupsize" value="Large" />Large
+            <input type="radio" name="cupsize" value="XLarge" />X-Large
+          </div>
+          <div>
+            <p>Fruits (Select as many):</p>
+            <input type="checkbox" name="fruit" value="Banana" />Banana
+            <input type="checkbox" name="fruit" value="Berries" />Berries
+            <input type="checkbox" name="fruit" value="Mango" />Mango
+            <input type="checkbox" name="fruit" value="Pineapple" />Pineapple
+            <input type="checkbox" name="fruit" value="Orange" />Orange
+            <input type="checkbox" name="fruit" value="Strawberry" />Strawberry
+            <input type="checkbox" name="fruit" value="Apple" />Apple
+            <input type="checkbox" name="fruit" value="Kiwi" />Kiwi
+          </div>
+          <div>
+            <label>Milk (Select One):</label>
+            <input type="radio" name="milk" value="Almond" />
+            <label for="Almond">Almond</label>
+            <input type="radio" name="milk" value="Oat" />
+            <label for="Oat">Oat</label>
+            <input type="radio" name="milk" value="Coconut" />
+            <label for="Coconut">Coconut</label>
+            <input type="radio" name="milk" value="Cashew" />
+            <label for="Cashew">Cashew</label>
+          </div>
+          <div>
+            <label>Protein(1 scoop) select as many-Optional:</label>
+            <input type="checkbox" name="protein" value="Pea" />
+            <label for="Pea">Pea</label>
+            <input type="checkbox" name="protein" value="Soy" />
+            <label for="Soy">Soy</label>
+            <input type="checkbox" name="protein" value="Hemp" />
+            <label for="Hemp">Hemp</label>
+          </div>
+          <div>
+            <label>Super Foods(1 scoop) select as many-Optional::</label>
+            <input type="checkbox" name="superfood" value="Hemp" />
+            <label for="Hemp">Hemp seed</label>
+            <input type="checkbox" name="superfood" value="Flax" />
+            <label for="Flax">Flax seed</label>
+            <input type="checkbox" name="superfood" value="Chia" />
+            <label for="Chia">Chia</label>
+            <input type="checkbox" name="superfood" value="Cacao" />
+            <label for="Cacao">Cacao powder</label>
+            <input type="checkbox" name="superfood" value="Maca" />
+            <label for="Maca">Maca</label>
+          </div>
+          <div>
+    
+          </div>
+          <p id="display"></p>   
+    </form>
+    <button class="orderNow">Order Now</button>
 </body>
 </html>
